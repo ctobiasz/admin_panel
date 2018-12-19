@@ -1,2 +1,22 @@
-<h1>Students#new</h1>
-<p>Find me in app/views/students/new.html.erb</p>
+<h1>Student Signup</h1>
+
+<%= form_for(@student) do |form| %>
+<label>What is your first name?</label><br>
+<%= form.text_field :first_name %> <br>
+
+<label>What is your last name?</label><br>
+<%= form.text_field :last_name %> <br>
+
+<label>What is your age?</label><br>
+<%= form.number_field :age %> <br>
+
+<label>What is your education level?</label><br>
+<%= form.select :education, ["", "Highschool Diploma", "Bachlor Degree", "Master's Degree", "Ph.D"]%><br>
+
+
+
+<p>
+<%= form.submit "Create Student" %>
+</p>
+
+<% end %>

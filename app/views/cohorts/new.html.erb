@@ -1,2 +1,26 @@
-<h1>Cohorts#new</h1>
-<p>Find me in app/views/cohorts/new.html.erb</p>
+<h1>Cohort Creation</h1>
+
+<%= form_for(@cohort) do |form| %>
+
+<label>Cohort Name?</label><br>
+<%= form.text_field :name %> <br>
+
+<label>Start End</label><br>
+<%= form.date_field :start_date %> <br>
+
+<label>End Date</label><br>
+<%= form.date_field :end_date %> <br>
+
+<label>Select Students</label><br>
+<%= form.number_field :student_id %>
+<%= form.select :education, ["", "Highschool Diploma", "Bachlor Degree", "Master's Degree", "Ph.D"]%><br>
+
+
+
+
+
+<p>
+<%= form.submit "Create Cohort" %>
+</p>
+
+<% end %>

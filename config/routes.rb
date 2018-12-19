@@ -1,20 +1,16 @@
 Rails.application.routes.draw do
-  get 'courses/new'
-  get 'courses/index'
-  get 'courses/show'
-  get 'courses/edit'
-  get 'cohorts/new'
-  get 'cohorts/index'
-  get 'cohorts/show'
-  get 'cohorts/edit'
-  get 'instructors/new'
-  get 'instructors/index'
-  get 'instructors/show'
-  get 'instructors/edit'
-  get 'students/new'
-  get 'students/index'
-  get 'students/show'
-  get 'students/edit'
-  get 'pages/home'
+
+root 'pages#home'
+
+resources :students
+resources :instructors
+resources :courses
+resources :cohorts
+
+get "/student-signup", to: 'students#new'
+get "/cohort-new", to: 'cohorts#new'
+get "/instructor-signup", to: 'instructors#new'
+
+get "/faq", to: 'pages#faq'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
