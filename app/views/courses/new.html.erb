@@ -1,0 +1,17 @@
+<h1> Create a Course</h1>
+
+
+<%= form_for(@course) do |c| %>
+
+<label> What is the courses name?</label><br>
+<%= c.text_field :name %><br>
+
+<label>Duration of course in hours?</label><br>
+<%= c.number_field :hours %><br>
+
+
+<p>
+  <%= c.submit "Create Course" %>
+</p>
+
+<% end %>

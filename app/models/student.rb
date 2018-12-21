@@ -6,4 +6,7 @@ class Student < ApplicationRecord
 
   belongs_to :cohort, optional: true
 
+  def student_full_name
+    "#{first_name} #{last_name}"
+  end
 end
