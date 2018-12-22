@@ -1,2 +1,22 @@
-<h1>Students#edit</h1>
-<p>Find me in app/views/students/edit.html.erb</p>
+<h1> Account Settings</h1>
+
+<%= form_for(@student) do |f| %>
+<label>What is your first name?</label><br>
+<%= f.text_field :first_name %> <br>
+
+<label>What is your last name?</label><br>
+<%= f.text_field :last_name %> <br>
+
+<label>What is your age?</label><br>
+<%= f.number_field :age %> <br>
+
+<label>What is your education level?</label><br>
+<%= f.select :education, ["", "Highschool Diploma", "Bachlor Degree", "Master's Degree", "Ph.D"]%><br>
+
+
+
+<p>
+<%= f.submit "Update Student" %>
+</p>
+
+<% end  %>

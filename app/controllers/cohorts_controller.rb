@@ -21,11 +21,18 @@ end
   end
 
   def edit
+    @cohort = Cohort.find(params[:id])
+  end
+
+  def update
+    @cohort = Cohort.find(params[:id])
+    @cohort.update(cohort_params)
+    redirect_to root_path
   end
 
   private
 
   def cohort_params
-  params.require(:cohort).permit(:name, :start_date, :end_date, :hours, :student_id, :instructor_id, :course_id)
+  params.require(:cohort).permit(:name, :start_date, :end_date, :hours, :instructor_id, :course_id, :student_ids => [])
   end
 end

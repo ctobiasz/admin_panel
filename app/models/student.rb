@@ -4,7 +4,7 @@ class Student < ApplicationRecord
   validates :age,         presence: true
   validates :education,   presence: true
 
-  belongs_to :cohort, optional: true
+  has_and_belongs_to_many :cohorts, optional: true
 
   def student_full_name
     "#{first_name} #{last_name}"

@@ -1,2 +1,30 @@
-<h1>Cohorts#edit</h1>
-<p>Find me in app/views/cohorts/edit.html.erb</p>
+<h1>Cohort Settings</h1>
+
+<%= form_for(@cohort) do |form| %>
+
+<label>Cohort Name?</label><br>
+<%= form.text_field :name %> <br>
+
+<label>Start End</label><br>
+<%= form.date_field :start_date %> <br>
+
+<label>End Date</label><br>
+<%= form.date_field :end_date %> <br><br>
+
+<label>Select Students</label><br>
+
+<%= form.collection_select :student_ids, Student.all, :id, :student_full_name, {include_blank: true},{:multiple => true} %> <br>
+
+
+<br>
+
+
+
+<label>Select Instructor</label><br>
+<%= collection_select(:cohort, :instructor_id, Instructor.all, :id, :instructor_full_name, {include_blank: true}) %><br>
+
+<p>
+<%= form.submit "Update Cohort" %>
+</p>
+
+<% end %>

@@ -5,7 +5,7 @@ class Instructor < ApplicationRecord
   validates :salary,      presence: true
   validates :education,   presence: true
 
-  belongs_to :cohort, optional: true
+  has_many :cohorts
 
   def instructor_full_name
     "#{first_name} #{last_name}"

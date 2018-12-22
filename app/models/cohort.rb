@@ -3,7 +3,7 @@ class Cohort < ApplicationRecord
   validates :start_date,  presence: true
   validates :end_date,  presence: true
 
-  has_one :instructor
-  has_many :students
-  
+  belongs_to :instructor
+  has_and_belongs_to_many :students
+
 end

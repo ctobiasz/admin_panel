@@ -22,6 +22,14 @@ end
   end
 
   def edit
+    @instructor = Instructor.find(params[:id])
+
+  end
+
+  def update
+    @instructor = Instructor.find(params[:id])
+    @instructor.update(instructor_params)
+    redirect_to root_path
   end
 
   private

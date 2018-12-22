@@ -13,10 +13,14 @@
 
 <label>Select Students</label><br>
 
-<%= collection_select(:cohort, :student_id, Student.all.map, :id, :student_full_name, {include_blank: true}) %><br>
+<%= form.collection_select :student_ids, Student.all, :id, :student_full_name, {include_blank: true},{:multiple => true} %> <br>
+
+
+<br>
+
+
 
 <label>Select Instructor</label><br>
-
 <%= collection_select(:cohort, :instructor_id, Instructor.all, :id, :instructor_full_name, {include_blank: true}) %><br>
 
 <p>
