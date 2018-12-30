@@ -23,6 +23,9 @@
 <label>Select Instructor</label><br>
 <%= collection_select(:cohort, :instructor_id, Instructor.all, :id, :instructor_full_name, {include_blank: true}) %><br>
 
+<label>Select Course</label><br>
+<%= collection_select(:course, :course_id, Course.all, :id, :name, {include_blank: true}) %><br>
+
 <p>
 <%= form.submit "Create Cohort" %>
 </p>

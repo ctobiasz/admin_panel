@@ -1,8 +1,8 @@
 class CreateJoinTableStudentCohort < ActiveRecord::Migration[5.2]
   def change
     create_join_table :students, :cohorts do |t|
-      # t.index [:student_id, :cohort_id]
-      # t.index [:cohort_id, :student_id]
+      t.references :cohort, foreign_key: true
+      t.references :student, foreign_key: true
     end
   end
 end

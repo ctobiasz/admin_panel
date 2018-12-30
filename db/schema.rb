@@ -17,14 +17,16 @@ ActiveRecord::Schema.define(version: 2018_12_21_205211) do
     t.date "start_date"
     t.date "end_date"
     t.integer "instructor_id"
-    t.integer "student_id"
+    t.integer "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "cohorts_students", id: false, force: :cascade do |t|
-    t.integer "student_id", null: false
-    t.integer "cohort_id", null: false
+    t.integer "student_id"
+    t.integer "cohort_id"
+    t.index ["cohort_id"], name: "index_cohorts_students_on_cohort_id"
+    t.index ["student_id"], name: "index_cohorts_students_on_student_id"
   end
 
   create_table "courses", force: :cascade do |t|
