@@ -14,8 +14,11 @@
       <td><%= instu.first_name %></td>
       <td><%= instu.last_name %></td>
       <td><%= instu.age %></td>
+      <td><%= instu.salary %></td>
       <td><%= instu.education %></td>
-      <td><a href="/instuctor/<%= instu.id %>">View Instructor</a></td>
+      <td><a href="/instructors/<%= instu.id %>">View Instructor</a></td>
     </tr>
     <% end %>
-</table>
+  </table>
+
+<%= link_to "Go back", root_path%>

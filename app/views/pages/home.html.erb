@@ -1,11 +1,28 @@
+
+
 <h1>ADMIN PANEL</h1>
 
-
+<div id="hold-the-panel-together">
+<section id="show-all-categories">
 <%= link_to "Create a new student", new_student_path %>
 <br>
-<%= link_to "Create a new instructor",  new_instructor_path %>
+<%= link_to "Create a new instructor", new_instructor_path %>
 <br>
-<%= link_to "Create a new cohort",  new_cohort_path %>
+<%= link_to "Create a new cohort", new_cohort_path %>
 <br>
-<%= link_to "Create a new course",  new_course_path%>
+<%= link_to "Create a new course", new_course_path%>
+<section>
+<br>
+
+<hr>
+
+<section class="show-all-categories-two">
+<%= link_to "View all students", students_url %>
+<br>
+<%= link_to "View all instructors", instructors_url %>
+<br>
+<%= link_to "View all cohorts", cohorts_url %>
+<br>
+<%= link_to "View all courses", courses_url %>
+</section>
 <br>
