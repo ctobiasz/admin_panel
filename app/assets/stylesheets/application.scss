@@ -16,6 +16,9 @@
    font-family: "Poppins", sans-serif !important;
  }
 
+
+
+/* SIDE NAVBAR */
  .sidebar {
    margin: 0;
    padding: 0;
@@ -33,13 +36,16 @@
    text-decoration: none;
  }
 
- .sidebar a.active {
+ .sidebar li#active {
    background-color: #132938;
    color: white;
  }
+ div.sidebar li.example a {
+  color: white;
+}
 
 
- .sidebar a:hover:not(.active) {
+ .sidebar a:hover:not(#active) {
    background-color: rgb(254, 123, 67);
    color: white;
  }
@@ -67,6 +73,19 @@
    }
  }
 
+ .links {
+   list-style-type: none;
+ }
+
+
+
+/* WRAPPER */
+
+.main-wrapper {
+  margin-left: 200px;
+  padding-top: 30px;
+  padding-left: 600px;
+}
 
 
 
