@@ -1,20 +1,19 @@
-<h2>All Students</h2>
-
+<h2>All Courses</h2>
 <table>
   <tr>
-  <th>First Name</th>
-  <th>Last Name</th>
-  <th>Age</th>
-  <th>Education</th>
-
+   <th>Course Name</th>
+   <th>Course Hours</th>
   </tr>
-<% @student.each do |s| %>
+
+<% @course.each do |c| %>
     <tr>
-      <td><%= s.first_name %></td>
-      <td><%= s.last_name %></td>
-      <td><%= s.age %></td>
-      <td><%= s.education %></td>
-      <td><a href="/students/<%= s.id %>">View Student</a></td>
+      <td><%= c.name %></td>
+      <td><%= c.hours %></td>
+      <td><a href="/courses/<%= c.id %>">View Course</a></td>
     </tr>
     <% end %>
 </table>
+
+<br>
+
+<%= link_to "Go back", root_path %>

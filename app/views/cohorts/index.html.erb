@@ -1,20 +1,23 @@
-<h2>All Students</h2>
+<h2>Cohorts</h2>
 
 <table>
   <tr>
-  <th>First Name</th>
-  <th>Last Name</th>
-  <th>Age</th>
-  <th>Education</th>
+  <th>Cohort Name</th>
+  <th>Start Date</th>
+  <th>End Date</th>
 
   </tr>
-<% @student.each do |s| %>
+<% @cohort.each do |cohort| %>
     <tr>
-      <td><%= s.first_name %></td>
-      <td><%= s.last_name %></td>
-      <td><%= s.age %></td>
-      <td><%= s.education %></td>
-      <td><a href="/students/<%= s.id %>">View Student</a></td>
+      <td><%= cohort.name %></td>
+      <td><%= cohort.start_date %></td>
+      <td><%= cohort.end_date %></td>
+
+      <td><a href="/cohorts/<%= cohort.id %>">View Cohort</a></td>
     </tr>
     <% end %>
 </table>
+
+<br>
+
+<%= link_to "Go back", root_path %>
