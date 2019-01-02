@@ -7,7 +7,7 @@ class InstructorsController < ApplicationController
    @instructor = Instructor.new(instructor_params)
    if @instructor.valid?
      @instructor.save
-     redirect_to root_path
+     redirect_to @instructor
    else
      p @instructor.errors.messages
      render 'new'
@@ -15,6 +15,7 @@ class InstructorsController < ApplicationController
 end
 
   def index
+    @instructor = Instructor.all
   end
 
   def show

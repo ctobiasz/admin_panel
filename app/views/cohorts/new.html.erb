@@ -1,3 +1,4 @@
+
 <h1>Cohort Creation</h1>
 
 <%= form_for(@cohort) do |form| %>
@@ -12,8 +13,9 @@
 <%= form.date_field :end_date %> <br>
 
 <label>Select Students</label><br>
+<%= form.collection_select :student_ids, Student.all, :id, :student_full_name, {include_blank: true},{:multiple => true} %>
 
-<%= form.collection_select :student_ids, Student.all, :id, :student_full_name, {include_blank: true},{:multiple => true} %> <br>
+<br>
 
 
 <br>

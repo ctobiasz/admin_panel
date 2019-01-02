@@ -12,6 +12,7 @@ get "/cohort-new", to: 'cohorts#new'
 get "/instructor-signup", to: 'instructors#new'
 get "/course-new", to: 'courses#new'
 
+get '/students-all', to: 'students#index'
 
 get 'students/:id/edit', to: 'students#edit'
 patch 'students/:id', to: 'students#update'

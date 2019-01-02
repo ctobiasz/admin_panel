@@ -7,7 +7,8 @@ class StudentsController < ApplicationController
    @student = Student.new(student_params)
    if @student.valid?
      @student.save
-     redirect_to root_path
+     flash[:notice] = "Student Account Created"
+     redirect_to @student
    else
      p @student.errors.messages
      render 'new'
@@ -15,6 +16,7 @@ class StudentsController < ApplicationController
 end
 
   def index
+    @student = Student.all
   end
 
   def show
