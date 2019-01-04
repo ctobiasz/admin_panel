@@ -1,19 +1,28 @@
-<h2>All Courses</h2>
-<table>
-  <tr>
+<h2 class="hero-text-students">All Courses</h2>
+<table id="students-table">
+  <tr class="top-row-table">
    <th>Course Name</th>
    <th>Course Hours</th>
+   <th>Course Main Page</th>
+   <th>Remove Course</th>
   </tr>
 
 <% @course.each do |c| %>
-    <tr>
+    <tr id="courseyoink-<%= c.id %>">
       <td><%= c.name %></td>
       <td><%= c.hours %></td>
-      <td><a href="/courses/<%= c.id %>">View Course</a></td>
+      <td class="table-styles"><a href="/courses/<%= c.id %>">View Course</a></td>
+      <td class="table-styles" style="font-size: 1.5em; padding-left: 30px; align-items: center; vertical-align: middle;justify-content: center; display: flex;
+      }">
+        <%= link_to course_path(c.id), { method: :delete, data: {confirm: 'Are you sure?'}, :remote => true } do %>
+        <i class="far fa-trash-alt animated rubberBand" id="trashbin-animation"></i>
+        <% end %>
+      </td>
     </tr>
     <% end %>
-</table>
+  </table>
+  <br>
 
-<br>
-
-<%= link_to "Go back", root_path %>
+  <%= link_to root_path,  { class: 'btn btn-primary goback-button' } do %>
+  <i class="fas fa-long-arrow-alt-left"></i> Back
+  <% end %>

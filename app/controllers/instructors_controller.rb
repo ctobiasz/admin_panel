@@ -38,6 +38,7 @@ end
     format.js
    end
    @instructor.destroy
+   flash[:alert] = "Instructor Deleted"
   end
 
   private
