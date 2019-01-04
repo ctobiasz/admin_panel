@@ -31,6 +31,15 @@ end
     redirect_to root_path
   end
 
+  def destroy
+  @course = Course.find(params[:id])
+  respond_to do |format|
+    format.js
+   end
+   @course.destroy
+   flash[:alert] = "Course Deleted"
+  end
+
   private
 
   def course_params

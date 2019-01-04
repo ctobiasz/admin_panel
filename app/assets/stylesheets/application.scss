@@ -108,12 +108,19 @@ tr:nth-of-type(odd):not(.top-row-table) {
 }
 tr {
   border: 1px solid black;
+  text-align: center;
 }
 
 // .goback-button {
 //   background-color: rgb(94, 190, 244) !important;
 //
 // }
+
+#trashbin-animation:hover {
+
+animation-iteration-count: infinite;
+
+}
 
 
 /* FLASH MESSAGE */
@@ -124,8 +131,9 @@ tr {
   margin-left: 200px;
   padding-left: 35%;
 }
+
 #alert {
-  background-color: red;
+  background-color: #b04a4a;
   color: white;
   margin-left: 200px;
   padding-left: 41%;

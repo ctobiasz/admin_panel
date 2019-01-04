@@ -32,6 +32,13 @@ end
     @instructor.update(instructor_params)
     redirect_to root_path
   end
+  def destroy
+  @instructor = Instructor.find(params[:id])
+  respond_to do |format|
+    format.js
+   end
+   @instructor.destroy
+  end
 
   private
 

@@ -1,0 +1,10 @@
+$('#studentyoink-<%= @student.id %>').fadeOut(500);
+
+
+
+$('#alert').fadeIn(1100 );
+setTimeout(function(){
+    $('#alert').fadeOut();
+  }, 3000);
+
+ $("html, body").animate({ scrollTop: 0 }, "slow");

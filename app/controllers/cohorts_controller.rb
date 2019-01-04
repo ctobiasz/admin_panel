@@ -31,6 +31,15 @@ end
     redirect_to root_path
   end
 
+  def destroy
+  @cohort = Cohort.find(params[:id])
+  respond_to do |format|
+    format.js
+   end
+   @cohort.destroy
+   flash[:alert] = "Cohort Deleted"
+  end
+
   private
 
   def cohort_params

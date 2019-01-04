@@ -1,26 +1,36 @@
-<h2>All Instructors</h2>
+<h2 class="hero-text-students">All Instructors</h2>
 
 <table>
-  <tr>
+  <tr class="top-row-table">
   <th>First Name</th>
   <th>Last Name</th>
   <th>Age</th>
   <th>Salary</th>
   <th>Education</th>
+  <th>Instructors Profile</th>
+  <th>Remove a instructor</th>
 
   </tr>
 <% @instructor.each do |instu| %>
-    <tr>
+    <tr id="instructoryoink-<% instu.id %>">
       <td><%= instu.first_name %></td>
       <td><%= instu.last_name %></td>
       <td><%= instu.age %></td>
       <td><%= instu.salary %></td>
       <td><%= instu.education %></td>
-      <td><a href="/instructors/<%= instu.id %>">View Instructor</a></td>
+      <td class="table-styles"><a href="/instructors/<%= instu.id %>">View Instructor</a></td>
+      <td class="table-styles" style="font-size: 1.5em; padding-left: 30px; align-items: center; vertical-align: middle;justify-content: center; display: flex;
+      }">
+        <%= link_to instructor_path(instu.id), { method: :delete, data: {confirm: 'Are you sure?'}, :remote => true } do %>
+        <i class="far fa-trash-alt animated rubberBand" id="trashbin-animation"></i>
+        <% end %>
+      </td>
     </tr>
     <% end %>
   </table>
 
 <br>
 
-<%= link_to "Go back", root_path %>
+<%= link_to root_path,  { class: 'btn btn-primary goback-button' } do %>
+<i class="fas fa-long-arrow-alt-left"></i> Back
+<% end %>
