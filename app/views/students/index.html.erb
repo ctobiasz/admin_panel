@@ -21,11 +21,18 @@
       <td class="table-styles"><%= s.age %></td>
       <td class="table-styles"><%= s.education %></td>
       <td class="table-styles"><a href="/students/<%= s.id %>">View Student</a></td>
-      <td class="table-styles"><%= link_to 'Remove Student', student_path(s.id), method: :delete, data: {confirm: 'Are you sure?'}, :remote => true %></td>
+      <td class="table-styles" style="font-size: 1.5em; padding-left: 30px;    align-items: center; vertical-align: middle;justify-content: center; display: flex;
+}">
+        <%= link_to student_path(s.id), { method: :delete, data: {confirm: 'Are you sure?'}, :remote => true } do %>
+        <i class="far fa-trash-alt"></i>
+        <% end %>
+      </td>
     </tr>
     <% end %>
 </table>
 
 <br>
 
-   <%= button_to "Go back", root_path, class: 'back-button'%>
+   <%= link_to root_path,  { class: 'btn btn-primary goback-button' } do %>
+   <i class="fas fa-long-arrow-alt-left"></i> Back
+   <% end %>
