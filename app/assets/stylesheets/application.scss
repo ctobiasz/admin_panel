@@ -11,11 +11,11 @@
  * It is generally better to create a new file per style scope.
  *
  */
+
  body {
    margin: 0;
    font-family: "Poppins", sans-serif !important;
  }
-
 
 
 /* SIDE NAVBAR */
@@ -118,8 +118,13 @@ tr {
 
 #trashbin-animation:hover {
 animation-iteration-count: infinite;
-// color: red;
+color: red;
 }
+
+#left-point-arrow:hover {
+animation-iteration-count: infinite;
+}
+
 
 // .fa-trash-alt{
 //   color: red;
