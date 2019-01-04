@@ -34,6 +34,17 @@ end
     redirect_to root_path
   end
 
+  def destroy
+  @student = Student.find(params[:id])
+  respond_to do |format|
+    format.js
+   end
+   @student.destroy
+   flash[:alert] = "Student Deleted"
+  end
+
+
+
   private
 
   def student_params

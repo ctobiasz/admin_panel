@@ -1,27 +1,31 @@
-<h2>All Students</h2>
+<h2 class="hero-text-students">All Students</h2>
 <br>
 <br>
 
 
-<table>
-  <tr>
-  <th>First Name</th>
-  <th>Last Name</th>
-  <th>Age</th>
-  <th>Education</th>
+<table id="students-table">
+  <tr class="top-row-table">
+  <th class="tt-ow">First Name</th>
+  <th class="tt-ow">Last Name</th>
+  <th class="tt-ow">Age</th>
+  <th class="tt-ow">Education</th>
+  <th class="tt-ow">Students Profile</th>
+  <th class="tt-ow">Remove a student</th>
 
   </tr>
 <% @student.each do |s| %>
-    <tr>
+    <tr id="studentyoink-<%= s.id %>">
       <td><%= s.first_name %></td>
-      <td><%= s.last_name %></td>
-      <td><%= s.age %></td>
-      <td><%= s.education %></td>
-      <td><a href="/students/<%= s.id %>">View Student</a></td>
+
+      <td class="table-styles"><%= s.last_name %></td>
+      <td class="table-styles"><%= s.age %></td>
+      <td class="table-styles"><%= s.education %></td>
+      <td class="table-styles"><a href="/students/<%= s.id %>">View Student</a></td>
+      <td class="table-styles"><%= link_to 'Remove Student', student_path(s.id), method: :delete, data: {confirm: 'Are you sure?'}, :remote => true %></td>
     </tr>
     <% end %>
 </table>
 
 <br>
 
-<%= link_to "Go back", root_path %>
+   <%= button_to "Go back", root_path, class: 'back-button'%>
