@@ -28,7 +28,7 @@ end
   def update
     @cohort = Cohort.find(params[:id])
     @cohort.update(cohort_params)
-    redirect_to root_path
+    redirect_to cohort_path
   end
 
   def destroy

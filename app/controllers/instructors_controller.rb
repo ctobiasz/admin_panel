@@ -30,8 +30,9 @@ end
   def update
     @instructor = Instructor.find(params[:id])
     @instructor.update(instructor_params)
-    redirect_to root_path
+    redirect_to instructor_path
   end
+
   def destroy
   @instructor = Instructor.find(params[:id])
   respond_to do |format|

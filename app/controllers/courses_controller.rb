@@ -28,7 +28,7 @@ end
   def update
     @course = Course.find(params[:id])
     @course.update(course_params)
-    redirect_to root_path
+    redirect_to course_path
   end
 
   def destroy
