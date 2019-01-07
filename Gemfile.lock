@@ -219,7 +219,7 @@ DEPENDENCIES
   bootstrap
   byebug
   capybara (>= 2.15)
-  chosen (~> 0.0.4)
+  chosen
   chromedriver-helper
   coffee-rails (~> 4.2)
   jbuilder (~> 2.5)
