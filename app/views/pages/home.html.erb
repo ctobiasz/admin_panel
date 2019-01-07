@@ -1,3 +1,5 @@
+<% if logged_in?%>
+
 <h1>ADMIN PANEL</h1>
 
 <div id="hold-the-panel-together">
@@ -24,3 +26,7 @@
 <%= link_to "View all courses", courses_url %>
 </section>
 <br>
+
+<% else %>
+<li><%= link_to 'Log in', login_path %></li>
+<% end %>

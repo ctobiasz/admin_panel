@@ -5,9 +5,6 @@ class Student < ApplicationRecord
   validates :education,   presence: true
 
 
-
-  belongs_to :admin
-
   has_and_belongs_to_many :cohorts, optional: true
 
   def student_full_name
