@@ -5,7 +5,7 @@ class AdminsController < ApplicationController
 
   def create
     @admin = Admin.new(admin_params)
-    if @admin.valid
+    if @admin.valid?
       @admin.save
       redirect_to @admin
     else

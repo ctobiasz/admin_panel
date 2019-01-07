@@ -1,15 +1,13 @@
 Rails.application.routes.draw do
 
-  get 'admins/new'
-  get 'admins/show'
-  get 'admins/edit'
-  get 'admins/index'
+
 root 'pages#home'
 
 resources :students
 resources :instructors
 resources :courses
 resources :cohorts
+resources :admins
 
 get '/login', to: 'sessions#new'
 post '/login', to: 'sessions#create'
