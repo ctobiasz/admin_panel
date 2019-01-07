@@ -1,0 +1,21 @@
+<h1>Admin Signup</h1>
+
+<%= form_for(@admin) do |form| %>
+<label>What is your first name?</label><br>
+<%= form.text_field :first_name %> <br>
+
+<label>What is your last name?</label><br>
+<%= form.text_field :last_name %> <br>
+
+<label>Email</label><br>
+<%= form.email_field :email %> <br>
+
+<label>Password</label><br>
+<%= form.password_field :password %> <br>
+
+
+<p>
+  <%= form.submit "Create Admin" %>
+</p>
+
+<% end %>

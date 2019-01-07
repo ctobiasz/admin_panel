@@ -1,0 +1,16 @@
+<h1> <%= Hello, @admin.first_name%> <%=@admin.last_name%></h1>
+
+<p>What would you like to do today?</p>
+
+<% link_to 'Create a new Student', new_student_path%>
+<% link_to 'Create a new Instructor', new_instructor_path%>
+<% link_to 'Create a new Cohort', new_cohort_path%>
+<% link_to 'Create a new Course', new_course_path%>
+
+
+
+<%= link_to edit_admin_path, {class: 'btn btn-danger'} do %>
+Edit Profile
+<% end %>
+
+<%= link_to "Home", root_path %>

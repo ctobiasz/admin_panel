@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
 
+  get 'admins/new'
+  get 'admins/show'
+  get 'admins/edit'
+  get 'admins/index'
 root 'pages#home'
 
 resources :students
 resources :instructors
 resources :courses
 resources :cohorts
+
+get '/login', to: 'sessions#new'
+post '/login', to: 'sessions#create'
+delete '/logout', to: 'sessions#destroy'
 
 get "/student-signup", to: 'students#new'
 get "/cohort-new", to: 'cohorts#new'
