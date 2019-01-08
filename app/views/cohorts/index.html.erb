@@ -13,7 +13,7 @@
       <td><%= cohort.name %></td>
       <td><%= cohort.start_date %></td>
       <td><%= cohort.end_date %></td>
-      <td class="table-styles"><a href="/cohorts/<%= cohort.id %>">View Instructor</a></td>
+      <td class="table-styles"><a href="/cohorts/<%= cohort.id %>">View Cohort</a></td>
       <td class="table-styles" style="font-size: 1.5em; padding-left: 30px; align-items: center; vertical-align: middle;justify-content: center; display: flex;
       }">
         <%= link_to cohort_path(cohort.id), { method: :delete, data: {confirm: 'Are you sure?'}, :remote => true } do %>

@@ -15,9 +15,10 @@
   <th class="tt-ow">Last Name</th>
   <th class="tt-ow">Age</th>
   <th class="tt-ow">Education</th>
+  <% if logged_in? %>
   <th class="tt-ow">Students Profile</th>
   <th class="tt-ow">Remove a student</th>
-
+<% end %>
   </tr>
 <% @student.each do |s| %>
     <tr id="studentyoink-<%= s.id %>">
@@ -26,6 +27,7 @@
       <td class="table-styles"><%= s.last_name %></td>
       <td class="table-styles"><%= s.age %></td>
       <td class="table-styles"><%= s.education %></td>
+      <% if logged_in? %>
       <td class="table-styles"><a href="/students/<%= s.id %>">View Student</a></td>
       <td class="table-styles" style="font-size: 1.5em; padding-left: 30px;    align-items: center; vertical-align: middle;justify-content: center; display: flex;
 }">
@@ -34,6 +36,7 @@
         <% end %>
       </td>
     </tr>
+    <% end %>
     <% end %>
 </table>
 

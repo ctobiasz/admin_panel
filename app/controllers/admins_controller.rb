@@ -4,7 +4,7 @@ class AdminsController < ApplicationController
     if logged_in?
       redirect_to root_path
     else
-      render new_admin_url
+      render 'new'
     end
 
 end
