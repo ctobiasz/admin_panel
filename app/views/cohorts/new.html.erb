@@ -12,7 +12,9 @@
 <%= form.date_field :end_date %> <br>
 
 <label>Select Students</label><br>
-<%= form.collection_select :student_ids, Student.all, :id, :student_full_name, {include_blank: true},{:multiple => true} %>
+<!-- <%= form.collection_select :student_ids, Student.all, :id, :student_full_name, {include_blank: true},{:multiple => true} %> -->
+
+<%= form.collection_select :student_ids, Student.order(:first_name), :id, :first_name, {}, { multiple: true, class: 'chosen-select' } %>
 
 <br>
 <br>

@@ -69,7 +69,10 @@ GEM
       xpath (~> 3.2)
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
-    chosen (0.0.4)
+    chosen-rails (1.8.7)
+      coffee-rails (>= 3.2)
+      railties (>= 3.0)
+      sass-rails (>= 3.2)
     chromedriver-helper (2.1.0)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
@@ -223,7 +226,7 @@ DEPENDENCIES
   bootstrap
   byebug
   capybara (>= 2.15)
-  chosen
+  chosen-rails
   chromedriver-helper
   coffee-rails (~> 4.2)
   faker
