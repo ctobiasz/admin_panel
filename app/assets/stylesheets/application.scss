@@ -32,6 +32,7 @@
    position: fixed;
    height: 100%;
    overflow: auto;
+
  }
 
  .sidebar a {
@@ -166,3 +167,19 @@ font-family: "Poppins" sans-serif !important;
 
 
 /* LOG IN PAGE*/
+
+
+/* FORM SETTINGS */
+#stincohort {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  display: none;
+}
+
+.edit-button-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -14,6 +14,44 @@
     </tr>
 </table>
 
+<p class="edit-button-all">
 <%= link_to edit_cohort_path, { class: 'btn btn-danger' } do %>
 Edit Profile
 <% end %>
+</p>
+
+
+<p class="edit-button-all">
+  <input type="button" class="btn btn-danger"  id="view-students-in-cohort" value="View Students"/>
+</p>
+
+
+<div id="stincohort">
+
+  <br>
+  <%if @cohort.students.present?%>
+
+       <br>
+       <table id="view-students-cohorts">
+         <tr class="top-row-table">
+           <th>Student</th>
+         </tr>
+
+         <%@cohort.students.each do |st|%>
+           <tr> <td><%=st.student_full_name%></td>
+         <%end%>
+         <%else%>
+         <p>No student added!</p>
+         <%end%>
+         <tr>
+       </table>
+
+  </div>
+
+<script>
+$(document).ready(function(){
+  $("#view-students-in-cohort").click(function(){
+    $("#stincohort").toggle();
+  });
+});
+</script>
