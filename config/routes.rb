@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-root 'sessions#new'
+root 'pages#home'
 
 resources :students
 resources :instructors
