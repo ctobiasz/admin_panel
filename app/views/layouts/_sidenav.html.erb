@@ -1,5 +1,10 @@
 <% if logged_in? %>
 <div class="sidebar">
+
+  <div class="logo-nav">
+    <p class="animated flip" id="logo-nav-text">AP</p>
+  </div>
+
   <li class="links example" id="active"><%= link_to "Admin Panel", root_path %></li>
   <li class="links"><%= link_to "Students", students_path %></li>
   <li class="links"><%= link_to "Instructors", instructors_path %></li>

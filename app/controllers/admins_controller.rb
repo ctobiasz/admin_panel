@@ -13,6 +13,7 @@ end
     @admin = Admin.new(admin_params)
     if @admin.valid?
       @admin.save
+      log_in @admin
       redirect_to @admin
     else
       p @admin.errors.messages

@@ -52,8 +52,9 @@
 
 
  .sidebar a:hover:not(#active) {
-   background-color: rgb(254, 123, 67);
+   background-color: #D85A42;
    color: white;
+
  }
 
  div.content {
@@ -65,7 +66,7 @@
  @media screen and (max-width: 700px) {
    .sidebar {
      width: 100%;
-     height: auto;
+     height: auto; animation-iteration-count: infinite;
      position: relative;
    }
    .sidebar a {float: left;}
@@ -81,6 +82,24 @@
 
  .links {
    list-style-type: none;
+ }
+
+.logo-nav {
+  border: 1px solid black;
+  background-color: #34495e;
+}
+.logo-nav:hover {
+  background-color: #D85A42;
+
+}
+
+
+ #logo-nav-text {
+ font-family: "Poppins", sans-serif !important;
+ font-weight: bold;
+ font-size: 5em;
+ text-align: center;
+ color: white;
  }
 
 
@@ -244,3 +263,17 @@ font-family: "Poppins" sans-serif !important;
 }
 
 /* PROFILES */
+.welcome-hero-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+}
+
+.admin-show-container {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 400px;
+}
