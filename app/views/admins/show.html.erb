@@ -1,11 +1,19 @@
-<h1> Hello, <%= @admin.first_name%> <%=@admin.last_name%></h1>
+<div class="admin-show-container">
+<h1> Welcome, <%= @admin.first_name%> <%=@admin.last_name%></h1>
 
 <p>What would you like to do today?</p>
 
-<% link_to 'Create a new Student', new_student_path%>
-<% link_to 'Create a new Instructor', new_instructor_path%>
-<% link_to 'Create a new Cohort', new_cohort_path%>
-<% link_to 'Create a new Course', new_course_path%>
+<section id="show-all-categories">
+  <div class="row">
+    <div class="col-lg-6 off-set-6">
+<%= link_to "Create a new student", new_student_path %>
+<br>
+<%= link_to "Create a new instructor", new_instructor_path %>
+<br>
+<%= link_to "Create a new cohort", new_cohort_path %>
+<br>
+<%= link_to "Create a new course", new_course_path%>
+<section>
 
 
 
@@ -14,3 +22,7 @@ Edit Profile
 <% end %>
 
 <%= link_to "Home", root_path %>
+
+</div>
+</div>
+</div>

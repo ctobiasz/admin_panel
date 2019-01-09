@@ -2,24 +2,25 @@
 
 <body class="login-body">
 
-<div class="login-container">
+  <div class="login-container">
 
-  <div class="login-box">
+      <div class="login-box">
 
-    <h1>Log in</h1>
-    <%= form_for(:session, url: login_path) do |f| %>
+        <h1 class="login-page-header">Log in</h1>
+        <%= form_for(:session, url: login_path) do |f| %>
 
-    <%= f.label :email %>
-    <%= f.email_field :email, class: "form-control" %>
+        <%= f.label :email %>
+        <%= f.email_field :email, class: "form-control" , id: "input-field-login" %>
 
-    <%= f.label :password %>
-    <%= f.password_field :password, class: "form-control"%>
+        <%= f.label :password %>
+        <%= f.password_field :password, class: "form-control", id: "input-field-login" %>
 
-    <%=   f.submit "Log in", class: "submit-button" %>
-  <% end %>
+        <%=   f.submit "Log in", class: "submit-button" %>
+        <% end %>
 
 
 
+
+    </div>
   </div>
-</div>
 </body>
