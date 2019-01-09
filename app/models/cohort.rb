@@ -6,4 +6,6 @@ class Cohort < ApplicationRecord
   belongs_to :instructor
   has_and_belongs_to_many :students
 
+  has_one_attached :avatar
+
 end
