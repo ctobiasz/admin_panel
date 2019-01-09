@@ -6,6 +6,8 @@ class Instructor < ApplicationRecord
   validates :education,   presence: true
 
   has_many :cohorts
+  
+  has_one_attached :avatar
 
   def instructor_full_name
     "#{first_name} #{last_name}"

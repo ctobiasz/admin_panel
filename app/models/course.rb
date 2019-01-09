@@ -4,5 +4,7 @@ class Course < ApplicationRecord
 
   has_many :cohorts
   
+  has_one_attached :avatar
+
 
 end

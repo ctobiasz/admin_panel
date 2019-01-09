@@ -11,4 +11,6 @@ class Admin < ApplicationRecord
   has_many :cohorts
   has_many :courses
 
+  has_one_attached :avatar
+
 end

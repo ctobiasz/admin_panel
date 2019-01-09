@@ -7,6 +7,8 @@ class Student < ApplicationRecord
 
   has_and_belongs_to_many :cohorts, optional: true
 
+  has_one_attached :avatar
+
   def student_full_name
     "#{first_name} #{last_name}"
   end
