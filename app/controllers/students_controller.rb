@@ -16,9 +16,11 @@ class StudentsController < ApplicationController
 end
 
   def index
-
+    # if logged_in?
     @student = Student.all
-
+  # else
+  #   redirect_to root_path
+  # end
   end
 
   def show
