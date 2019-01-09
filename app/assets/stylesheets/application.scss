@@ -117,10 +117,8 @@ tr {
   text-align: center;
 }
 
-// .goback-button {
-//   background-color: rgb(94, 190, 244) !important;
-//
-// }
+.edit-button-back {
+}
 
 #trashbin-animation:hover {
 animation-iteration-count: infinite;
@@ -182,4 +180,8 @@ font-family: "Poppins" sans-serif !important;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.edit-button-back {
+
 }

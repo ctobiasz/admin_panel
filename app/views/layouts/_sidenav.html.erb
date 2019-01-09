@@ -1,5 +1,5 @@
+<% if logged_in? %>
 <div class="sidebar">
-  <% if logged_in? %>
   <li class="links example" id="active"><%= link_to "Admin Panel", root_path %></li>
   <li class="links"><%= link_to "Students", students_path %></li>
   <li class="links"><%= link_to "Instructors", instructors_path %></li>
@@ -12,8 +12,6 @@
 
 <li> <%= link_to 'Logout', logout_path, method: :delete %></li>
 
-<% else %>
-<li><%= link_to 'Log in', login_path %></li>
 <% end %>
 
 </div>
