@@ -43,6 +43,6 @@ end
   private
 
   def cohort_params
-  params.require(:cohort).permit(:name, :start_date, :end_date, :instructor_id, :course_id, :student_ids => [])
+  params.require(:cohort).permit(:name, :start_date, :end_date, :instructor_id, :course_id, :avatar, :student_ids => [])
   end
 end
