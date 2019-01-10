@@ -3,6 +3,7 @@
 <table id="students-table">
   <tr class="top-row-table">
     <th>Cohort Name</th>
+    <th>Cohorts Course</th>
     <th>Start Date</th>
     <th>End Date</th>
     <th>Cohort Profile</th>
@@ -11,6 +12,7 @@
 <% @cohort.each do |cohort| %>
     <tr id="cohortyoink-<%= cohort.id %>">
       <td><%= cohort.name %></td>
+      <td><%= cohort.course.name %></td>
       <td><%= cohort.start_date %></td>
       <td><%= cohort.end_date %></td>
       <td class="table-styles"><a href="/cohorts/<%= cohort.id %>">View Cohort</a></td>

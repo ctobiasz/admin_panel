@@ -58,10 +58,4 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
-
-  if ENV['RACK_ENV']
-  ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])
-else
-  set :database, {adapter: "sqlite3", database: "article.sqlite3"}
-end
 end
