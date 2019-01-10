@@ -1,13 +1,62 @@
+<style>
+img {
+  width: 300px;
+  height:300px;
+}
+p {
+  text-align: center;
+  align-items: center;
+  font-family:'Poppins', sans-serif !important;
+  text-decoration: underline;
+  
+
+
+}
+
+</style>
+
+
 
 <div class="profile-top-thing">ADMIN PANEL</div>
 
-<div id="hold-the-panel-together">
-<section id="show-all-categories">
-<%= link_to "Create a new student", new_student_path %>
-<br>
-<%= link_to "Create a new instructor", new_instructor_path %>
-<br>
-<%= link_to "Create a new cohort", new_cohort_path %>
-<br>
-<%= link_to "Create a new course", new_course_path%>
-<section>
+
+
+<div class="hold-this-shit-together">
+
+<div class="row">
+  <div class="col-md-3 dashboard-things">
+
+<p>Create a New Student</P>
+<%= link_to new_student_path do %>
+
+<img src="https://png.pngtree.com/svg/20170920/ico_students_1144772.png" alt="">
+<% end %>
+
+
+
+<p>Create a New Instructor</P>
+
+<%= link_to new_instructor_path do %>
+<img src="http://pluspng.com/img-png/brain-png-brain-icon-png-image-2536-942.png" alt="">
+<% end %>
+</div>
+
+
+<div class="col-md-3 dashboard-things">
+
+  <p>Create a New Cohort</P>
+
+<%= link_to new_cohort_path do %>
+<img src="https://cdn2.iconfinder.com/data/icons/pittogrammi/142/88-512.png" alt="">
+<% end %>
+
+
+<p>Create a New Course</P>
+
+<%= link_to new_course_path do %>
+<img src="https://image.flaticon.com/icons/png/512/4/4259.png" alt="">
+<% end %>
+</div>
+
+</div>
+</div>

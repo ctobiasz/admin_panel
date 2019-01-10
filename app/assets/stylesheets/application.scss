@@ -348,3 +348,16 @@ width: 200px;
   input {
     text-align: center;
   }
+
+  /* MAIN DASHBOARD */
+
+  .hold-this-shit-together {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dashboard-things {
+    padding: 30px;
+    margin: 50px;
+  }
