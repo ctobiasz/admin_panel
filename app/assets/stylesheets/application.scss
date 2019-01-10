@@ -313,4 +313,38 @@ font-family: "Poppins" sans-serif !important;
 .admin-profile-edit:hover {
 width: 200px;
 }
-  
+
+
+  /* EDIT PROFILE */
+  .edit-body {
+    margin: 0;
+    padding: 0;
+    font-family:'Poppins', sans-serif !important;
+    background-color: whitesmoke;
+  }
+
+
+  .edit-box{
+    width: 400px;
+    position:absolute;
+    top: 45%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 40px;
+    background: #e74c3c;
+    color: white;
+    border: 2px solid white;
+  }
+
+  #edit-button-style {
+    margin-top: 15px;
+    border: 1px solid white;
+  }
+  #edit-button-style:hover {
+    border: 1px solid white;
+    width: 200px;
+  }
+  input {
+    text-align: center;
+  }

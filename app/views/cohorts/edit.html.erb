@@ -1,31 +1,46 @@
-<h1>Cohort Settings</h1>
+<style>
+p{
+  font-size: 0.8em;
+}</style>
+
+<div class="profile-top-thing">Cohort Settings</div>
+<body class="edit-body">
+
+  <div class="edit-container">
+
+      <div class="edit-box">
 
 <%= form_for(@cohort) do |form| %>
 
 <label>Cohort Name?</label><br>
 <%= form.text_field :name %> <br>
 
+
 <label>Start End</label><br>
 <%= form.date_field :start_date %> <br>
 
+
 <label>End Date</label><br>
-<%= form.date_field :end_date %> <br><br>
+<%= form.date_field :end_date %> <br>
+
 
 <label>Select Students</label><br>
+<p>Type in the blank field :</p>
 
 <%= form.collection_select :student_ids, Student.all, :id, :student_full_name, {include_blank: true},{:multiple => true, class: 'chosen-select'} %> <br>
 <!-- <%= form.collection_select :student_ids, Student.order(:first_name), :id, :first_name, {}, { multiple: true, class: 'chosen-select' } %> -->
 
 
-<br>
-
-
-
+<hr>
 <label>Select Instructor</label><br>
 <%= collection_select(:cohort, :instructor_id, Instructor.all, :id, :instructor_full_name, {include_blank: true}) %><br>
 
 <p>
-<%= form.submit "Update Cohort" %>
+  <%= form.submit "Save Changes", {class: "btn btn-danger", id: "edit-button-style" }%>
 </p>
 
 <% end %>
+
+</div>
+</div>
+</body>

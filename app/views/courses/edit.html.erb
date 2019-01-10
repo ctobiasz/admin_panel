@@ -1,4 +1,9 @@
 <div class="profile-top-thing"> Edit Course</div>
+<body class="edit-body">
+
+  <div class="edit-container">
+
+      <div class="edit-box">
 
 
 <%= form_for(@course) do |c| %>
@@ -11,7 +16,11 @@
 
 
 <p>
-  <%= c.submit "Create Course" %>
+  <%= c.submit "Save Changes", {class: "btn btn-danger", id: "edit-button-style" }%>
 </p>
 
 <% end %>
+
+</div>
+</div>
+</body>

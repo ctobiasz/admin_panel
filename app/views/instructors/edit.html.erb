@@ -1,5 +1,11 @@
 <div class="profile-top-thing">Instructor Settings</div>
 
+<body class="edit-body">
+
+  <div class="edit-container">
+
+    <div class="edit-box">
+
 <%= form_for(@instructor) do |form| %>
 <label>What is your first name?</label><br>
 <%= form.text_field :first_name %> <br>
@@ -19,7 +25,11 @@
 
 
 <p>
-  <%= form.submit "Update Instructor" %>
+  <%= form.submit "Save Changes", {class: "btn btn-danger", id: "edit-button-style" }%>
 </p>
 
 <% end %>
+
+</div>
+</div>
+</body>
