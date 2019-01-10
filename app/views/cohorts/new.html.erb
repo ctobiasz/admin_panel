@@ -1,5 +1,12 @@
 <div class="profile-top-thing">Cohort Creation</div>
 
+
+<body class="sign-up-body">
+
+  <div class="sign-up-container">
+
+      <div class="sign-up-box">
+
 <%= form_for(@cohort) do |form| %>
 
 <label>Cohort Name?</label><br>
@@ -14,10 +21,6 @@
 <label>Select Students</label><br>
 <%= form.collection_select :student_ids, Student.all, :id, :student_full_name, {include_blank: true},{:multiple => true, class: 'chosen-select'} %> <br>
 <!-- <%= form.collection_select :student_ids, Student.order(:first_name), :id, :first_name, {}, { multiple: true, class: 'chosen-select' } %> -->
-
-<br>
-<br>
-
 <label>Select Instructor</label><br>
 <%= collection_select(:cohort, :instructor_id, Instructor.all, :id, :instructor_full_name, {include_blank: true}) %><br>
 
@@ -28,7 +31,11 @@
 <%= form.file_field :avatar, direct_upload: true %>
 
 <p>
-<%= form.submit "Create Cohort" %>
+  <%= form.submit "Create Cohort", {class: "btn btn-danger", id: "edit-button-style" } %>
 </p>
 
 <% end %>
+
+</div>
+</div>
+</body>

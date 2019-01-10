@@ -1,5 +1,11 @@
 <div class="profile-top-thing">Instructor Signup</div>
 
+<body class="sign-up-body">
+
+  <div class="sign-up-container">
+
+      <div class="sign-up-box">
+
 <%= form_for(@instructor) do |form| %>
 <label>What is your first name?</label><br>
 <%= form.text_field :first_name %> <br>
@@ -19,7 +25,11 @@
 
 
 <p>
-  <%= form.submit "Create Instructor" %>
+  <%= form.submit "Create Instructor", {class: "btn btn-danger", id: "edit-button-style" } %>
 </p>
 
 <% end %>
+
+</div>
+</div>
+</body>

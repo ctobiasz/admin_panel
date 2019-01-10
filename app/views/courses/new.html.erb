@@ -1,6 +1,12 @@
 <div class="profile-top-thing"> Create a Course</div>
 
 
+<body class="sign-up-body">
+
+  <div class="sign-up-container">
+
+      <div class="sign-up-box">
+
 <%= form_for(@course) do |c| %>
 
 <label> What is the courses name?</label><br>
@@ -11,7 +17,11 @@
 
 
 <p>
-  <%= c.submit "Create Course" %>
+  <%= c.submit "Create Course", {class: "btn btn-danger", id: "edit-button-style" } %>
 </p>
 
 <% end %>
+
+</div>
+</div>
+</body>
