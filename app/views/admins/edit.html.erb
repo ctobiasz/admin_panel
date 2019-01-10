@@ -1,5 +1,11 @@
 <div class="profile-top-thing">Admin Signup</div>
 
+<body class="sign-up-body">
+
+  <div class="sign-up-container">
+
+      <div class="sign-up-box">
+
 <%= form_for(@admin) do |form| %>
 <label>What is your first name?</label><br>
 <%= form.text_field :first_name %> <br>
@@ -15,7 +21,11 @@
 
 
 <p>
-  <%= form.submit "Update Admin" %>
+  <%= form.submit "Update Admin", {class: "btn btn-danger", id: "edit-button-style" } %>
 </p>
 
 <% end %>
+
+</div>
+</div>
+</body>
