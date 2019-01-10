@@ -1,28 +1,26 @@
-<h1 class="welcome-hero-text"> Welcome, <%= @admin.first_name%> <%=@admin.last_name%></h1>
-<div class="admin-show-container">
+<body class="admin-profile-body">
 
-<p>What would you like to do today?</p>
+<div class="profile-top-thing"> Welcome, <%= @admin.first_name%> <%=@admin.last_name%></div>
 
-<section id="show-all-categories">
-  <div class="row">
-    <div class="col-lg-6 off-set-6">
-<%= link_to "Create a new student", new_student_path %>
-<br>
-<%= link_to "Create a new instructor", new_instructor_path %>
-<br>
-<%= link_to "Create a new cohort", new_cohort_path %>
-<br>
-<%= link_to "Create a new course", new_course_path%>
-<section>
+<div class="card-profile">
+  <p>First Name:  <%= @admin.first_name %></p>
+  <p>Last Name:  <%= @admin.last_name %></p>
+  <p>Email:  <%= @admin.email %></p>
 
+<hr>
 
-
-<%= link_to edit_admin_path, {class: 'btn btn-danger'} do %>
+<div class="edit-profile button">
+<%= link_to edit_admin_path, {class: 'btn btn-danger admin-profile-edit'} do %>
 Edit Profile
 <% end %>
 
-<%= link_to "Home", root_path %>
+</div>
+</div>
+</body>
 
-</div>
-</div>
-</div>
+
+
+
+
+
+<!-- <%= link_to "Home", root_path %> -->
