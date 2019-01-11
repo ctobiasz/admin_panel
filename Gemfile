@@ -16,6 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 gem 'chosen-rails'
 gem 'faker'
+gem 'sentry-raven'
 # making selections look nicer
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
