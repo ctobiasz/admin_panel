@@ -98,6 +98,10 @@ else
   set :database, {adapter: "sqlite3", database: "article.sqlite3"}
 end
 
+Raven.configure do |config|
+  config.dsn = ENV['SENTRY_DSN']
+end
+
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
