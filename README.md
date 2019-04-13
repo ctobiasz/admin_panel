@@ -1,24 +1,16 @@
-# README
+# Admin Panel
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Descripton
+> This is a education system based admin panel.
 
-Things you may want to cover:
+# UI/UX
+> I was going for a easy on the eye design while keeping the user experience simplisitic.
 
-* Ruby version
+# Technologies Used
+* HTML & CSS
 
-* System dependencies
+* Ruby on Rails
 
-* Configuration
+* Animate.css
+ 
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
