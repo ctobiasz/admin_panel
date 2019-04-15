@@ -10,17 +10,20 @@
         <%= form_for(:session, url: login_path) do |f| %>
 
         <%= f.label :email %>
-        <%= f.email_field :email, class: "form-control" , id: "input-field-login" %>
+        <%= f.email_field :email, class: "form-control" , id: "input-field-login", placeholder: "chris@exmaple.com"%>
 
         <%= f.label :password %>
-        <%= f.password_field :password, class: "form-control", id: "input-field-login" %>
+        <%= f.password_field :password, class: "form-control", id: "input-field-login", placeholder: "00000"%>
 
-        <%=   f.submit "Log in", class: "submit-button" %>
+        <%= f.submit "Log in", class: "submit-button" %>
         <% end %>
 
 
-
-
+        <%= form_for(:session, url: login_path) do |form| %>
+        <%= form.hidden_field :email, :value => 'chris@example.com' %>
+        <%= form.hidden_field :password, :value => '00000'%>
+        <%= form.submit "DEMO", class: "submit-button" %>
+        <% end %>
     </div>
   </div>
 </body>
